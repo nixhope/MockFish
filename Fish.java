@@ -146,7 +146,7 @@ public class Fish {
 		if (alive)
 			g.setColor(color);
 		else
-			g.setColor(Color.black);
+			g.setColor(Color.WHITE);
 		
 		if (type == 0) {
 			if (alive) {

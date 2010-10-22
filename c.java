@@ -20,7 +20,7 @@ public class c{
 	public static final int WIDTH = 1024-15;
 	public static final int HEIGHT = 768-35;
 	public static final int SIZE = MED;
-	public static final int LIFE = 5000;
+	public static final int LIFE = 200;
 	public static final int SPEED = 5; // hundredth lengths moved per timer tick
 	public static final int TICK = 25; // milliseconds between ticks
 	public static final int MAXFISH = 100;
