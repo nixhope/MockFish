@@ -19,7 +19,7 @@ public class MockFishJPanel extends JPanel implements ActionListener, MouseListe
 		addKeyListener( this );
 		addMouseListener( this );
 		addMouseMotionListener ( this );
-		t = new Timer(25, this);
+		t = new Timer(c.TICK, this);
 		size = c.SIZE;
 		mouseMoved = false;
 		
@@ -31,7 +31,7 @@ public class MockFishJPanel extends JPanel implements ActionListener, MouseListe
 	// Draw stuff
 	public void paintComponent( Graphics g ) {
 		super.paintComponent( g );
-		g.setColor(new Color(5, 6, 132));
+		g.setColor(Color.BLACK);//g.setColor(new Color(5, 6, 132));
 		g.fillRect(0, 0, c.WIDTH, c.HEIGHT);
 		for (int i = 0; i < fishCount; i++)
 			myFish[i].draw(g);
@@ -60,7 +60,7 @@ public class MockFishJPanel extends JPanel implements ActionListener, MouseListe
 	private void addFish() {
 		if (fishCount < myFish.length)
 		{
-			myFish[fishCount] = new Fish(size, myFish);
+			myFish[fishCount] = new Fish(size, myFish, new Point(mousePressedLocation.x, mousePressedLocation.y));
 			fishCount++;
 		} else {
 			for (int i = 0; i < fishCount; i++) {

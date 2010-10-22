@@ -7,6 +7,8 @@ public class c{
 	public static final int SMALL = 30;
 	public static final int MED = 50;
 	public static final int LARGE = 70;
+	public static final int HUGE = 200;
+
 	
 	public static final int UP = 0;
 	public static final int RIGHT = 1;
@@ -15,10 +17,11 @@ public class c{
 	public static final int STATIC = 4;
 	
 	// Edit these:
-	public static final int WIDTH = 640-15;
-	public static final int HEIGHT = 480-35;
+	public static final int WIDTH = 1024-15;
+	public static final int HEIGHT = 768-35;
 	public static final int SIZE = MED;
-	public static final int LIFE = 50;
+	public static final int LIFE = 5000;
 	public static final int SPEED = 5; // hundredth lengths moved per timer tick
-	public static final int MAXFISH = 10;
+	public static final int TICK = 25; // milliseconds between ticks
+	public static final int MAXFISH = 100;
 }

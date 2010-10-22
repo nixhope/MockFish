@@ -11,17 +11,9 @@ public class Fish {
 	int type;
 	Color color;
 	
-	public Fish(int size, Fish[] fishArray) {
+	public Fish(int size, Fish[] fishArray, Point p) {
 		n = size;
-		boolean noIntersect = false;
-		while (!noIntersect) {
-			r = new Rectangle((int)(Math.random()*(c.WIDTH-n)),(int)(Math.random()*(c.HEIGHT-n)), n, n);
-			noIntersect = true;
-			for (int i = 0; i < fishArray.length; i++)
-				if (fishArray[i] != null)
-					if (fishArray[i].intersects(r))
-						noIntersect = false;
-		}
+		r = new Rectangle(p.x, p.y, n, n);
 		life = c.LIFE;
 		move = n*c.SPEED/100;
 		direction = (int)(Math.random()*4);
